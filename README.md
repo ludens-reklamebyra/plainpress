@@ -3,7 +3,7 @@ A plain Wordpress theme with gulp, scss, and browserify.
 
 ## Install
 ```
-$ git clone git@github.com:ludens-reklamebyra/plainpress.git
+$ git clone git@github.com:ludens-reklamebyra/plainpress.git && cd plainpress
 $ npm install
 ```
 

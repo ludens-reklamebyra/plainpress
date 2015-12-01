@@ -1,4 +1,4 @@
-# plainpress
+`# plainpress
 A plain Wordpress theme with gulp, scss, and browserify.
 
 ## Install
@@ -15,7 +15,7 @@ $ gulp
 Compile (compiles and minifies):
 ```
 $ gulp compile --production
-``
+```
 Lint (just lints php, scss, and js :beer:):
 ```
 $ gulp lint

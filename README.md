@@ -1,4 +1,4 @@
-`# plainpress
+# plainpress
 A plain Wordpress theme with gulp, scss, and browserify.
 
 ## Install

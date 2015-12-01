@@ -1,0 +1,27 @@
+{
+  "name": "plainpress",
+  "version": "0.0.1",
+  "homepage": "https://github.com/ludens-reklamebyra/plainpress",
+  "authors": [
+    "Stian Bakkane <stianba@gmail.com>"
+  ],
+  "description": "A plain Wordpress theme with gulp, scss, and browserify.",
+  "keywords": [
+    "wordpress",
+    "gulp",
+    "scss",
+    "browserify",
+    "bower"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "~3.0.3"
+  }
+}

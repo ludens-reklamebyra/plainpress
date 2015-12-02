@@ -1,6 +1,6 @@
 {
   "name": "plainpress",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A plain Wordpress theme with gulp, scss, and browserify.",
   "main": "index.js",
   "scripts": {

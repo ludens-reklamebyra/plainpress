@@ -15,6 +15,7 @@ const scsslint = require('gulp-scss-lint');
 const eslint = require('gulp-eslint');
 const runSequence = require('run-sequence');
 const phplint = require('phplint').lint
+const autoprefixer = require('gulp-autoprefixer');
 
 const dev = !argv.production ? true : false;
 
@@ -51,6 +52,7 @@ gulp.task('sass', () => {
     .pipe(sass({
       outputStyle: dev ? 'nested' : 'compressed'
     }).on('error', sass.logError))
+    .pipe(autoprefixer())
     .pipe(gulpif(dev, sourcemaps.write()))
     .pipe(gulp.dest('./assets/css'))
     .pipe(gulpif(dev, livereload()));

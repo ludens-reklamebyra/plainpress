@@ -53,8 +53,8 @@ gulp.task('sass', () => {
     .pipe(sass({
       outputStyle: dev ? 'nested' : 'compressed'
     }).on('error', sass.logError))
+	.pipe(autoprefixer({ browsers: ['last 3 versions','> 1%'] }))
     .pipe(gulpif(dev, sourcemaps.write()))
-    .pipe(autoprefixer({ browsers: ['last 3 versions','> 1%'] }))
     .pipe(gulp.dest('./assets/css'))
     .pipe(gulpif(dev, livereload()));
 });

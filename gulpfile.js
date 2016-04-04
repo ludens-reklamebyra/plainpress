@@ -17,6 +17,7 @@ const runSequence = require('run-sequence');
 const phplint = require('phplint').lint
 const autoprefixer = require('gulp-autoprefixer');
 const postcss = require('gulp-postcss');
+const gutil = require('gulp-util')
 
 const dev = !argv.production ? true : false;
 

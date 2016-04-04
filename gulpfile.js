@@ -37,6 +37,12 @@ gulp.task('bundle', () => {
   function bundle() {
     return bundler
       .bundle()
+      .on('error', (err) => {
+        gutil.log(
+          gutil.colors.red('Browserify compile error: '),
+          err.toString()
+        )
+      })
       .pipe(source('./resources/js/app.js'))
       .pipe(bufferifyify())
       .pipe(gulpif(!dev, uglify()))

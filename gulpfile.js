@@ -12,11 +12,9 @@ const livereload = require('gulp-livereload');
 const uglify = require('gulp-uglify');
 const gulpif = require('gulp-if');
 const scsslint = require('gulp-scss-lint');
-const eslint = require('gulp-eslint');
 const runSequence = require('run-sequence');
 const phplint = require('phplint').lint
 const autoprefixer = require('gulp-autoprefixer');
-const postcss = require('gulp-postcss');
 const gutil = require('gulp-util')
 
 const dev = !argv.production ? true : false;
@@ -81,26 +79,6 @@ gulp.task('scss-lint', () => {
     .pipe(scsslint());
 });
 
-gulp.task('js-lint', () => {
-  return gulp.src(['./resources/js/**/*.js'])
-    .pipe(eslint({
-      extends: 'eslint:recommended',
-      ecmaFeatures: {
-        modules: true,
-        jsx: true,
-        classes: true,
-        blockBindings: true,
-        arrowFunctions: true,
-        forOf: true
-      },
-      env: {
-        node: false,
-        browser: true
-      }
-    }))
-    .pipe(eslint.format());
-});
-
 gulp.task('php-lint', (cb) => {
   phplint(['./**/*.php', '!./node_modules/**/*'], {limit: 10}, (err, stdout, stderr) => {
     if (err) {
@@ -111,8 +89,13 @@ gulp.task('php-lint', (cb) => {
   })
 });
 
+gulp.task('copyfonts', function() {
+   gulp.src('./bower_components/font-awesome/fonts/**/*.{ttf,woff,eof,svg}')
+   .pipe(gulp.dest('./assets/fonts'));
+});
+
 gulp.task('compile', ['bundle', 'sass']);
-gulp.task('lint', ['scss-lint', 'js-lint', 'php-lint']);
+gulp.task('lint', ['scss-lint', 'php-lint']);
 gulp.task('default', () => {
   runSequence('lint', ['compile', 'watch']);
 });

@@ -10,13 +10,11 @@ $ npm install
 ## Run
 Default (lints, compiles, and watches php, sass, and js):
 ```
-$ gulp
+$ npm run dev
 ```
-Compile (compiles and minifies):
+Compile (making fontawesome, compiles and minifies):
 ```
-$ gulp compile --production
+$ npm run build
 ```
-Lint (just lints php, scss, and js :beer:):
-```
-$ gulp lint
-```
+Font Awesome
+`$ npm run fontAwesome`

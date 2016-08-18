@@ -71,7 +71,7 @@ gulp.task('watch', () => {
 })
 
 gulp.task('copyfonts', function() {
-   gulp.src('./bower_components/font-awesome/fonts/**/*.{ttf,woff,eof,svg}')
+   gulp.src('./bower_components/font-awesome/fonts/**/*.{ttf,woff,eof,svg,woff2}')
    .pipe(gulp.dest('./assets/fonts'))
 })
 

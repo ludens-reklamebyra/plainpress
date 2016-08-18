@@ -1,10 +1,10 @@
 {
   "name": "plainpress",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A plain Wordpress theme with gulp, scss, and browserify.",
   "main": "index.js",
   "scripts": {
-    "postinstall": "bower install && echo 'Good job 🍺.'",
+    "postinstall": "bower install",
     "prebuild": "npm run fontAwesome",
     "build": "gulp compile --production",
     "test": "mocha resources/js/tests/*.js --compilers js:babel-core/register",
@@ -22,8 +22,11 @@
     "browserify",
     "bower"
   ],
-  "author": "Stian Bakkane <stianba@gmail.com>",
-  "license": "ISC",
+  "authors": [
+    "Stian Bakkane <stianba@gmail.com>",
+    "Øyvind Hermansen <oyvindher@gmail.com>"
+  ],
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ludens-reklamebyra/plainpress/issues"
   },
@@ -44,13 +47,13 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.1.0",
     "gulp-sourcemaps": "^2.0.0-alpha",
-    "gulp-uglify": "^1.5.1",
+    "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
-    "mocha": "^2.4.5",
+    "mocha": "^3.0.2",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.6.1",
-    "yargs": "^4.6.0"
+    "yargs": "^5.0.0"
   },
   "dependencies": {
     "jquery": "^3.0.0"

@@ -1,23 +1,23 @@
-const gulp = require('gulp')
-const sass = require('gulp-sass')
-const browserify = require('browserify')
-const babelify = require('babelify')
-const watchify = require('watchify')
-const source = require('vinyl-source-stream')
-const bufferifyify = require('vinyl-buffer')
-const rename = require('gulp-rename')
-const sourcemaps = require('gulp-sourcemaps')
-const argv = require('yargs').argv
-const livereload = require('gulp-livereload')
-const uglify = require('gulp-uglify')
-const gulpif = require('gulp-if')
-const autoprefixer = require('gulp-autoprefixer')
-const gutil = require('gulp-util')
+import gulp from 'gulp'
+import sass from 'gulp-sass'
+import browserify from 'browserify'
+import babelify from 'babelify'
+import watchify from 'watchify'
+import source from 'vinyl-source-stream'
+import bufferifyify from 'vinyl-buffer'
+import rename from 'gulp-rename'
+import sourcemaps from 'gulp-sourcemaps'
+import { argv } from 'yargs'
+import livereload from 'gulp-livereload'
+import uglify from 'gulp-uglify'
+import gulpif from 'gulp-if'
+import autoprefixer from 'gulp-autoprefixer'
+import gutil from 'gulp-util'
 
 const dev = !argv.production ? true : false
 
 gulp.task('bundle', () => {
-  const bundler = browserify({
+  let bundler = browserify({
     cache: {},
     packageCache: {},
     entries: ['./resources/js/app.js'],

@@ -1,5 +1,6 @@
-# plainpress
-A plain Wordpress theme with gulp, scss, and browserify.
+![Preview](./assets/images/Group.png)
+
+A plain Wordpress theme with gulp, scss, browserify and babel.
 
 The theme provides quick development with wordpress on a local host. (For FTP, use a client like FileZilla or remoteFTP-package from ATOM). This is fully specced with gulp as taskrunner, that gives you SCSS and ES6-javascript without any more configuration. Just follow the installation and run-steps down below.
 
@@ -10,31 +11,26 @@ $ npm install
 ```
 
 ## Run
-
-#### Development
-Watches SCSS and JS with livereload for faster development.
+Default (lints, compiles, and watches php, sass, and js):
 ```
 $ npm run dev
 ```
-#### Production
-making fontawesome, compiles and minifies
+Compile (making fontawesome, compiles and minifies):
 ```
 $ npm run build
 ```
-#### Font Awesome
+Font Awesome
 `$ npm run fontAwesome`
 
+## Testing
 
-## Testing javascript
-This WP-theme is installed with Mocha and ChaiJS to cover unit tests with javascript.
-The unit-tests are also configured with ES6/ES2015.
+This WP-theme is installed with Mocha and ChaiJS to cover unit tests with javascript. The unit-tests are also configured with ES6/ES2015.
 
-```
-$ npm test
-```
-* Example:
+`$ npm test`
 
-```javascript
+Example:
+
+```js
 // Import the modules you like
 import { expect, should, assert } from 'chai'
 

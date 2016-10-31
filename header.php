@@ -10,3 +10,11 @@
         <?php wp_head(); ?>
     </head>
     <body>
+
+        <header class="header">
+            <div class="row">
+                <div class="column">
+
+                </div>
+            </div>
+        </header>

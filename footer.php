@@ -1,3 +1,11 @@
+        <footer class="footer">
+            <div class="row">
+                <div class="column">
+
+                </div>
+            </div>
+        </footer>
+        
         <script>
             var scriptURL = "<?php echo bloginfo('template_url'); ?>";
         </script>

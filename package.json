@@ -55,6 +55,7 @@
     "yargs": "^6.0.0"
   },
   "dependencies": {
+    "babel-preset-es2017": "^6.16.0",
     "jquery": "^3.0.0"
   }
 }

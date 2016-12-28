@@ -5,12 +5,12 @@
                 </div>
             </div>
         </footer>
-        
+
         <script>
             var scriptURL = "<?php echo bloginfo('template_url'); ?>";
         </script>
         <script
-            src="<?php bloginfo('template_url'); ?>/assets/js/app.js"
+            src="<?php bloginfo('template_url'); ?>/assets/js/bundle.js"
             charset="utf-8">
         </script>
         <?php wp_footer (); ?>

@@ -16,6 +16,10 @@ import gutil from 'gulp-util'
 
 const dev = !argv.production ? true : false
 
+if (!dev) {
+  process.env.NODE_ENV = 'production'
+}
+
 gulp.task('bundle', () => {
   let bundler = browserify({
     cache: {},

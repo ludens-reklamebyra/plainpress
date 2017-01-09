@@ -10,14 +10,6 @@ module.exports = {
     filename: 'js/bundle.js',
     publicPath: '/js/'
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
-    new ExtractTextPlugin('css/bundle.css', {
-      publicPath: '/css/',
-      allChunks: false
-    })
-  ],
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
@@ -31,5 +23,13 @@ module.exports = {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract("style-loader", "css-loader!autoprefixer-loader!sass-loader")
     }]
-  }
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin(),
+    new ExtractTextPlugin('css/bundle.css', {
+      publicPath: '/css/',
+      allChunks: false
+    })
+  ],
 }

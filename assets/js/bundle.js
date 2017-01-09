@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "1bc839b301c026bacd48"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "770980660277e550e303"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -597,7 +597,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "1bc839b301c026bacd48"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "770980660277e550e303"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -1121,7 +1121,7 @@
 /* 0 */
 /***/ function(module, exports) {
 
-	eval("console.log('damn')\n\n\n//////////////////\n// WEBPACK FOOTER\n// ./resources/js/app.js\n// module id = 0\n// module chunks = 0\n//# sourceURL=webpack:///./resources/js/app.js?");
+	eval("console.log('damn lol')\n\n\n//////////////////\n// WEBPACK FOOTER\n// ./resources/js/app.js\n// module id = 0\n// module chunks = 0\n//# sourceURL=webpack:///./resources/js/app.js?");
 
 /***/ }
 /******/ ]);

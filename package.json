@@ -1,6 +1,6 @@
 {
   "name": "plainpress",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A plain Wordpress theme with gulp, scss, and browserify.",
   "main": "index.js",
   "scripts": {
@@ -8,9 +8,11 @@
     "build": "gulp compile --production",
     "test": "mocha resources/js/tests/*.js --compilers js:babel-core/register",
     "fontAwesome": "gulp copyfonts",
-    "dev": "gulp",
-    "lint": "eslint ./resources/js"
+    "start": "gulp",
+    "lint": "eslint ./resources/js",
+    "lint:watch": "esw --watch --color ./resources/js"
   },
+  "pre-commit": ["lint"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ludens-reklamebyra/plainpress.git"
@@ -24,7 +26,8 @@
   ],
   "authors": [
     "Stian Bakkane <stianba@gmail.com>",
-    "Øyvind Hermansen <oyvindher@gmail.com>"
+    "Øyvind Hermansen <oyvind@ludensreklame.no>",
+    "Kristian Normand <kristian@ludensreklame.no>"
   ],
   "license": "MIT",
   "bugs": {
@@ -38,15 +41,16 @@
     "babel-preset-es2015": "^6.1.18",
     "babel-preset-stage-0": "^6.5.0",
     "babelify": "^7.2.0",
-    "browserify": "^13.0.0",
+    "browserify": "^14.1.0",
     "chai": "^3.5.0",
     "eslint-plugin-babel": "^4.0.0",
+    "eslint-watch": "^3.0.1",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-if": "^2.0.0",
     "gulp-livereload": "^3.8.1",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.1.0",
+    "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.0.0-alpha",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
@@ -54,7 +58,7 @@
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.6.1",
-    "yargs": "^6.0.0"
+    "yargs": "^7.0.2"
   },
   "dependencies": {
     "babel-eslint": "^7.1.1",

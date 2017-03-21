@@ -9,10 +9,10 @@
         "react"
     ],
     "rules": {
-        "quotes": [1, "single", {"allowTemplateLiterals": true}],
+        "quotes": [2, "single", {"allowTemplateLiterals": true}],
         "curly": [1, "multi-line", "consistent"],
         "strict": [1, "never"],
-        "semi": [1, "never"],
+        "semi": [2, "always"],
         "no-unused-vars": [1, { "vars": "all", "args": "after-used" }],
         "no-redeclare": [1, { "builtinGlobals": true }],
         "brace-style": [1, "1tbs"],

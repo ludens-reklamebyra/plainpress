@@ -5,9 +5,10 @@
                 </div>
             </div>
         </footer>
-        
+
         <script>
             var scriptURL = "<?php echo bloginfo('template_url'); ?>";
+            var siteURL = "<?php echo bloginfo('url'); ?>";
         </script>
         <script
             src="<?php bloginfo('template_url'); ?>/assets/js/app.js"

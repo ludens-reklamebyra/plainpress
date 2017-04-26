@@ -4,15 +4,25 @@
   "description": "A plain Wordpress theme with gulp, scss, and browserify.",
   "main": "index.js",
   "scripts": {
-    "postinstall": "bower install && npm run fontAwesome",
-    "build": "gulp compile --production",
+    "postinstall": "bower install",
+    "build": "gulp compile --production && npm run fontAwesome",
     "test": "mocha resources/js/tests/*.js --compilers js:babel-core/register",
     "fontAwesome": "gulp copyfonts",
     "start": "gulp",
+    "dev": "gulp",
     "lint": "eslint ./resources/js",
     "lint:watch": "esw --watch --color ./resources/js"
   },
-  "pre-commit": ["lint"],
+  "pre-commit": [
+    "lint",
+    "lint-staged"
+  ],
+  "lint-staged": {
+    "resources/js/**/*.js": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ludens-reklamebyra/plainpress.git"
@@ -54,7 +64,10 @@
     "gulp-sourcemaps": "^2.0.0-alpha",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
+    "husky": "^0.13.3",
+    "lint-staged": "^3.4.0",
     "mocha": "^3.0.2",
+    "prettier": "^1.2.2",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.6.1",

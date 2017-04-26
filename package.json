@@ -55,21 +55,18 @@
     "gulp-sourcemaps": "^2.0.0-alpha",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
-    "husky": "^0.13.3",
-    "lint-staged": "^3.4.0",
     "mocha": "^3.0.2",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.6.1",
     "yargs": "^7.0.2",
-    "prettier": "^1.2.2"
-  },
-  "dependencies": {
     "babel-eslint": "^7.1.1",
     "babel-preset-es2017": "^6.16.0",
     "eslint": "^3.13.0",
     "eslint-plugin-babel": "^4.0.0",
-    "eslint-plugin-react": "^6.9.0",
+    "eslint-plugin-react": "^6.9.0"
+  },
+  "dependencies": {
     "jquery": "^3.0.0"
   }
 }

@@ -15,7 +15,7 @@
     "lint:watch": "esw --watch --color ./resources/js"
   },
   "lint-staged": {
-    "./resources/js/**/*.js": [
+    "resources/**/*.js": [
       "prettier --single-quote --write",
       "git add"
     ]

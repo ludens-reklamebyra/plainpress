@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "bower install",
-    "precommit": "lint-staged",
+    "pre-commit": "lint",
     "build": "gulp compile --production && npm run fontAwesome",
     "test": "mocha resources/js/tests/*.js --compilers js:babel-core/register",
     "fontAwesome": "gulp copyfonts",
@@ -13,12 +13,6 @@
     "dev": "gulp",
     "lint": "eslint ./resources/js",
     "lint:watch": "esw --watch --color ./resources/js"
-  },
-  "lint-staged": {
-    "resources/**/*.js": [
-      "prettier --single-quote --write",
-      "git add"
-    ]
   },
   "repository": {
     "type": "git",

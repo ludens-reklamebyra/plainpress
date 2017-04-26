@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "bower install",
-    "pre-commit": "lint",
     "build": "gulp compile --production && npm run fontAwesome",
     "test": "mocha resources/js/tests/*.js --compilers js:babel-core/register",
     "fontAwesome": "gulp copyfonts",
@@ -14,6 +13,7 @@
     "lint": "eslint ./resources/js",
     "lint:watch": "esw --watch --color ./resources/js"
   },
+  "pre-commit": ["lint"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ludens-reklamebyra/plainpress.git"

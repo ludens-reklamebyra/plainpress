@@ -1,5 +1,5 @@
 import $ from 'jquery';
 
 $(document).ready(() => {
-  // Write code
+  // Write bugfree code
 });

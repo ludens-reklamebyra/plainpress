@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "bower install",
-    "precommit": ["lint-staged", "lint"],
+    "precommit": "lint-staged",
     "build": "gulp compile --production && npm run fontAwesome",
     "test": "mocha resources/js/tests/*.js --compilers js:babel-core/register",
     "fontAwesome": "gulp copyfonts",

@@ -12,9 +12,9 @@
     "dev": "gulp",
     "lint": "eslint ./resources/js",
     "lint:watch": "esw --watch --color ./resources/js",
-    "precommit": "lint-staged",
-    "pre-commit": "lint"
+    "precommit": "lint-staged"
   },
+  "pre-commit": ["lint"],
   "lint-staged": {
     "resources/js/**/*.js": [
       "prettier --single-quote --write",

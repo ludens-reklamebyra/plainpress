@@ -11,12 +11,11 @@
     "start": "gulp",
     "dev": "gulp",
     "lint": "eslint ./resources/js",
-    "lint:watch": "esw --watch --color ./resources/js",
-    "precommit": "lint-staged"
+    "lint:watch": "esw --watch --color ./resources/js"
   },
-  "pre-commit": ["lint"],
+  "pre-commit": ["lint", "lint-staged"],
   "lint-staged": {
-    "resources/js/**/*.js": [
+    "*.js": [
       "prettier --single-quote --write",
       "git add"
     ]
@@ -68,7 +67,8 @@
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.6.1",
-    "yargs": "^7.0.2"
+    "yargs": "^7.0.2",
+    "prettier": "^1.2.2"
   },
   "dependencies": {
     "babel-eslint": "^7.1.1",
@@ -76,7 +76,6 @@
     "eslint": "^3.13.0",
     "eslint-plugin-babel": "^4.0.0",
     "eslint-plugin-react": "^6.9.0",
-    "jquery": "^3.0.0",
-    "prettier": "^1.2.2"
+    "jquery": "^3.0.0"
   }
 }

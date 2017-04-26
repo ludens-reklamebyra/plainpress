@@ -12,7 +12,8 @@
     "dev": "gulp",
     "lint": "eslint ./resources/js",
     "lint:watch": "esw --watch --color ./resources/js",
-    "precommit": "npm run lint && lint-staged"
+    "precommit": "lint-staged",
+    "pre-commit": "lint"
   },
   "lint-staged": {
     "resources/js/**/*.js": [

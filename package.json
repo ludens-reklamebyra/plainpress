@@ -11,11 +11,12 @@
     "start": "gulp",
     "dev": "gulp",
     "lint": "eslint ./resources/js",
-    "lint:watch": "esw --watch --color ./resources/js"
+    "lint:watch": "esw --watch --color ./resources/js",
+    "precommit": "lint-staged"
   },
-  "pre-commit": ["lint", "lint-staged"],
+  "pre-commit": ["lint"],
   "lint-staged": {
-    "*.js": [
+    "resources/js/**/*.js": [
       "prettier --single-quote --write",
       "git add"
     ]

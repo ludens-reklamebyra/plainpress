@@ -5,14 +5,14 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "bower install",
+    "precommit": "lint-staged",
     "build": "gulp compile --production && npm run fontAwesome",
     "test": "mocha resources/js/tests/*.js --compilers js:babel-core/register",
     "fontAwesome": "gulp copyfonts",
     "start": "gulp",
     "dev": "gulp",
     "lint": "eslint ./resources/js",
-    "lint:watch": "esw --watch --color ./resources/js",
-    "precommit": "lint-staged && npm run lint"
+    "lint:watch": "esw --watch --color ./resources/js"
   },
   "lint-staged": {
     "./resources/js/**/*.js": [

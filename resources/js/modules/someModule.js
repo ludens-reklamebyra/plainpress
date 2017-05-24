@@ -1,7 +1,3 @@
-const thisIsAFunctionJustToTestPrettierInAction = (someArg, someArg2, someArg3) => {
-  return {
-    someArg,
-    someArg2,
-    someArg3
-  };
-};
+const app = () => console.log('running');
+
+export default app;

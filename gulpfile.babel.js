@@ -29,7 +29,7 @@ gulp.task('bundle', () => {
   })
 
   bundler.transform(babelify, {
-    presets: ['es2015', 'stage-0', 'es2017']
+    presets: ['env']
   })
 
   if (dev) bundler = watchify(bundler)

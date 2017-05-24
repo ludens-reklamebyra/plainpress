@@ -1,14 +1,8 @@
 import $ from 'jquery';
+import thisIsAFunctionJustToTestPrettierInAction from './modules/someModule';
 
 $(document).ready(() => {
   // Write bugfree code
   console.log('App is running');
-
-  const thisIsAFunctionJustToTestPrettierInAction = (someArg, someArg2, someArg3) => {
-    return {
-      someArg,
-      someArg2,
-      someArg3
-    };
-  };
+  thisIsAFunctionJustToTestPrettierInAction();
 });

@@ -12,16 +12,11 @@
     "dev": "gulp",
     "lint": "eslint ./resources/js",
     "lint:watch": "esw --watch --color ./resources/js",
-    "precommit": "lint-staged"
-  },
-  "lint-staged": {
-    "resources/js/**/*.js": [
-      "prettier --single-quote --write",
-      "git add"
-    ]
+    "prettier": "prettier --single-quote --write resources/js/**/*.js"
   },
   "pre-commit": [
-    "lint"
+    "lint",
+    "prettier"
   ],
   "repository": {
     "type": "git",
@@ -67,8 +62,6 @@
     "gulp-sourcemaps": "^2.6.0",
     "gulp-uglify": "^2.1.2",
     "gulp-util": "^3.0.8",
-    "husky": "^0.13.3",
-    "lint-staged": "^3.4.0",
     "mocha": "^3.3.0",
     "prettier": "^1.2.2",
     "vinyl-buffer": "^1.0.0",

@@ -1,4 +1,4 @@
-![Preview](./assets/images/Group.png)
+![Preview](./assets/images/plainpress-logo.png)
 
 A plain Wordpress theme with gulp, scss, browserify and babel.
 

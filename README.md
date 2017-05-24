@@ -22,29 +22,14 @@ $ npm run build
 Font Awesome
 `$ npm run fontAwesome`
 
-### Lint
+### Lint & Formatting
 This repo is configured with `es-lint` to make code consistant between developers.
 
 NB: This WP-team is installed with `precommit-hook`, so you wont be able to commit and push to your repository if linting fails.
 
+The `precommit-hook` will also run the code formatter `prettier` on all your subfolders to `js` to make styling consistant.
+
+<em>Tip: You can also run `npm run prettier` to manually format the JS.</em>
+
 To lint once, run `$ npm run lint`.
 To have lint watch while developing, run `$ npm run lint:watch`
-
-### Testing
-
-This WP-theme is installed with Mocha and ChaiJS to cover unit tests with javascript. The unit-tests are also configured with ES6/ES2015.
-
-`$ npm test`
-
-Example:
-
-```js
-// Import the modules you like
-import { expect, should, assert } from 'chai'
-
-describe('your module', () => {
-  it('should do something awesome', () => {
-    expect('awesome').to.equal('awesome')
-  })
-})
-```

@@ -178,7 +178,7 @@ commands:
 jobs:
   init:
     docker:
-      - image: nodesource/trusty:6.3.1
+      - image: nodesource/centos6:6.3.1
 
     steps:
       - checkout
@@ -186,10 +186,11 @@ jobs:
 
       - run:
           command: |
-            'curl -o- -L https://yarnpkg.com/install.sh | bash'
-            'export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"'
+            sudo yum install yarn
 
-      - run: yarn install
+      - run:
+          command: |
+            yarn install
 
       - persist_to_workspace:
           root: .

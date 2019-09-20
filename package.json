@@ -4,7 +4,7 @@
   "description": "A plain Wordpress theme with gulp, scss, and browserify.",
   "main": "index.js",
   "scripts": {
-    "postinstall": "bower install",
+    "postinstall": "bower install --allow-root",
     "build": "gulp compile --production && npm run fontAwesome",
     "fontAwesome": "gulp copyfonts",
     "start": "gulp",

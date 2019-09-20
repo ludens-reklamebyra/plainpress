@@ -189,9 +189,7 @@ jobs:
             curl -o- -L https://yarnpkg.com/install.sh | bash
             export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-      - run:
-          command: |
-            yarn install
+      - run: yarn install
 
       - persist_to_workspace:
           root: .
@@ -244,10 +242,6 @@ workflows:
             branches:
               only:
                 - master
-          post-steps:
-            - send_slack_message:
-                when: on_fail
-                payload: *fail-payload
 
   feature:
     jobs:

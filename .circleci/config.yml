@@ -186,7 +186,7 @@ jobs:
 
       - run:
           command: |
-            yum install yarn
+            yum2dnf install yarn
 
       - run:
           command: |

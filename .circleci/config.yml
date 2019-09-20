@@ -186,6 +186,8 @@ jobs:
 
       - run:
           command: |
+            curl -o- -L https://yarnpkg.com/install.sh
+            ./install.sh
             yarn install
 
       - persist_to_workspace:

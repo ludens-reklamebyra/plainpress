@@ -178,9 +178,8 @@ commands:
 jobs:
   init:
     docker:
-      - image: nodesource/centos6:6.3.1
-    environment:
-      HOME: /
+      - image: nodesource/fedora23:6.3.1
+
     steps:
       - checkout
       - create_npm_config

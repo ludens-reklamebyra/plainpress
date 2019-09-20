@@ -192,7 +192,7 @@ jobs:
       - run:
           command: |
             yarn global add bower
-            yarn install
+            yarn install --allow-root
 
       - persist_to_workspace:
           root: .

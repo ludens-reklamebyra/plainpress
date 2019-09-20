@@ -179,7 +179,8 @@ jobs:
   init:
     docker:
       - image: nodesource/centos6:6.3.1
-
+    environment:
+      HOME: /
     steps:
       - checkout
       - create_npm_config

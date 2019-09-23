@@ -192,6 +192,7 @@ jobs:
       - run:
           command: |
             yarn global add bower
+            yarn global add gulp
             yarn install
             yarn build
 

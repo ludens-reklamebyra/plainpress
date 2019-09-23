@@ -77,7 +77,7 @@ commands:
       - run:
           name: 'Sending message to Slack'
           command: |
-            curl -X POST -H 'Content-type: application/json' --data << parameters.payload >> $SLACK_COMMIE
+            curl -X POST -H 'Content-type: application/json' --data << parameters.payload >> $SLACK_STRINGRAY
           when: << parameters.when >>
   login_to_git:
     description: 'Login to git'
@@ -235,6 +235,10 @@ workflows:
       - init:
           name: init-master
           context: PROD
+          post-steps:
+            - send_slack_message:
+                when: on_fail
+                payload: *fail-payload
           filters:
             branches:
               only:
@@ -250,7 +254,6 @@ workflows:
               ignore:
                 - master
 
-
   nightly:
     triggers:
       - schedule:
@@ -263,4 +266,3 @@ workflows:
       - init:
           name: init-nightly
           context: PROD
-

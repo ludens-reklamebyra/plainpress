@@ -193,6 +193,7 @@ jobs:
           command: |
             yarn global add bower
             yarn install
+            yarn build
 
   build:
     docker:
